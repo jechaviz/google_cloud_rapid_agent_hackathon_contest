@@ -12,6 +12,10 @@ No subir secretos, tokens, emails reales, nombres de clientes ni PII.
 - `evidence/cloud_run_service.txt`: salida redacted de `gcloud run services describe`.
 - `evidence/dynatrace_mcp_tools.txt`: tool list o screenshot redacted.
 - `evidence/video_transcript.md`: transcript final de demo.
+- `evidence/demo_video_frame.png`: generated screenshot frame, not committed if
+  binary line budget exceeds policy.
+- `evidence/demo_video.webm`: generated demo clip, kept local or uploaded to a
+  video host before Devpost submit.
 - `evidence/devpost_form_prefill.png`: screenshot del draft antes del submit.
 
 ## Comandos
@@ -20,6 +24,7 @@ No subir secretos, tokens, emails reales, nombres de clientes ni PII.
 .\scripts\run_v_evidence.ps1
 v run C:\git\v_projects\google_cloud_rapid_agent_hackathon\cmd\agent serve --port 8080
 v run C:\git\websites\google_cloud_rapid_agent_hackathon\tools\static_server.v C:\git\websites\google_cloud_rapid_agent_hackathon 8902
+npx --yes -p playwright node scripts\record_demo.mjs
 ```
 
 Cloud Run:

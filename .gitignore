@@ -13,3 +13,5 @@ build/
 # Keep sanitized evidence, ignore raw local captures by default.
 evidence/*.raw.json
 evidence/*.log
+evidence/demo_video.webm
+evidence/demo_video_frame.png
