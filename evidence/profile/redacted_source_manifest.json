@@ -1,7 +1,7 @@
 {
   "schema": "vimport.redacted_profile_manifest.v1",
   "label": "google_cloud_rapid_agent_hackathon",
-  "generated_at": "2026-05-29 19:56:36",
+  "generated_at": "2026-05-29 21:26:49",
   "source_root_ref": "local_profile_root",
   "redaction_policy": "path names and document contents are not exported",
   "areas": [
@@ -16,7 +16,7 @@
     {"id":"area_009","role":"enterprise_workflow_product_proof","risk":"safe_summary_only","file_count":1268,"dir_count":156,"capped":true,"extensions":["cjs","css","csv","docx","example","html","js","json","jsonl","lock","log","md"]},
     {"id":"area_010","role":"enterprise_workflow_product_proof","risk":"safe_summary_only","file_count":651,"dir_count":181,"capped":true,"extensions":["css","html","js","json","lock","log","md","png","py","toml","ts","tsx"]},
     {"id":"area_011","role":"local_project_or_private_profile_area","risk":"private_no_content_export","file_count":83,"dir_count":32,"capped":true,"extensions":["cjs","css","html","jpeg","jpg","js","json","md","mjs","mmd","png","vue"]},
-    {"id":"area_012","role":"founder_profile_private","risk":"private_no_content_export","file_count":82,"dir_count":8,"capped":false,"extensions":["bak_20260529_182407","bak_20260529_194517","env","json","png","ps1","refs","txt","yml"]},
+    {"id":"area_012","role":"founder_profile_private","risk":"private_no_content_export","file_count":94,"dir_count":13,"capped":false,"extensions":["bak_20260529_182407","bak_20260529_194517","env","json","ndjson","png","ps1","refs","txt","yml"]},
     {"id":"area_013","role":"enterprise_workflow_product_proof","risk":"safe_summary_only","file_count":569,"dir_count":50,"capped":false,"extensions":["cjs","css","csv","db","example","html","js","json","lock","md","mjs","png"]},
     {"id":"area_014","role":"enterprise_workflow_product_proof","risk":"safe_summary_only","file_count":223,"dir_count":35,"capped":false,"extensions":["cjs","css","cssfrag","db","example","html","js","jsfrag","json","lock","md","mjs"]}
   ],

@@ -1,7 +1,7 @@
 {
   "schema": "vimport.profile_secure_inputs.v1",
   "opportunity": "google_cloud_rapid_agent_hackathon",
-  "generated_at": "2026-05-29 19:59:49",
+  "generated_at": "2026-05-29 21:26:04",
   "storage_policy": "keep this file private; commit only redacted completion receipts",
   "submit_gate": "human_review_required_before_external_submit",
   "fields": [
