@@ -28,6 +28,9 @@ Cloud Run:
 gcloud run services describe aegisops-incident-agent --region us-central1 --format json > evidence/cloud_run_service.raw.json
 ```
 
+If local `gcloud` is unavailable, run the product repo workflow
+`Deploy Cloud Run` with `GCP_SA_KEY` and `GCP_PROJECT_ID` secrets.
+
 Redactar cualquier valor sensible antes de commit:
 
 ```powershell

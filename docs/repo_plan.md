@@ -26,7 +26,8 @@
 - Gate 1: tests unitarios pasan.
 - Gate 2: backend V corre y genera JSON.
 - Gate 3: dashboard Vue se conecta al backend.
-- Gate 4: Cloud Run URL responde `/healthz`.
+- Gate 4: Cloud Run URL responde `/healthz`; local machine currently lacks
+  `gcloud`, so GitHub Actions deploy workflow is the primary deploy path.
 - Gate 5: Devpost draft tiene hosted URL, repo URL y video URL.
 - Gate 6: evidence pack no contiene secretos.
 
