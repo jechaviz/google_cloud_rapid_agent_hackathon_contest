@@ -7,6 +7,10 @@ No subir secretos, tokens, emails reales, nombres de clientes ni PII.
 
 - `evidence/v_agent_run.json`: salida del agente V en modo demo.
 - `evidence/v_eval.json`: evaluador V con gates Devpost.
+- `evidence/v_agent_run_gemini.json`: salida del agente V usando Gemini real.
+- `evidence/v_eval_gemini.json`: evaluador V sobre el run Gemini real.
+- `evidence/secure_external_enablement.json`: refs de vault, GitHub secret
+  configurado y pendientes de GCP/Dynatrace sin secretos.
 - `evidence/local_vue_dashboard.png`: screenshot de UI local con plan generado.
 - `evidence/local_vue_index.html`: HTML del dashboard capturado para inspeccion.
 - `evidence/local_v_health.txt`: salud del servidor V local.
@@ -59,6 +63,7 @@ Select-String -Path evidence\* -Pattern "Bearer|token|api_key|@"
 - Agent value: AegisOps concentra contexto, propone remediacion reversible y
   genera evidencia/postmortem desde el primer run.
 - Google proof: Gemini model y Cloud Run runtime documentados en output.
+- Google proof plus: `v_agent_run_gemini.json` muestra `mode=gemini`.
 - MCP proof: Dynatrace MCP mode, endpoint redacted, tools y selected tool.
 - Safety proof: `approval_required=true` por defecto y redaction test.
 - Automation proof: WAIBAv readiness receipt and Veloclaw policy receipts.

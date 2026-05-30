@@ -88,6 +88,30 @@ steps:
       params:
         message: "V evaluation evidence is missing."
 
+    - name: Check Gemini run evidence
+      action: FS.Exists
+      register: v_gemini_present
+      params:
+        path: "${CONTEST_DIR}\\evidence\\v_agent_run_gemini.json"
+
+    - name: Require Gemini run evidence
+      action: Fail
+      if_not: "${v_gemini_present}"
+      params:
+        message: "Gemini run evidence is missing."
+
+    - name: Check secure external enablement receipt
+      action: FS.Exists
+      register: secure_enablement_present
+      params:
+        path: "${CONTEST_DIR}\\evidence\\secure_external_enablement.json"
+
+    - name: Require secure external enablement receipt
+      action: Fail
+      if_not: "${secure_enablement_present}"
+      params:
+        message: "Secure external enablement receipt is missing."
+
     - name: Check Devpost submission draft
       action: FS.Exists
       register: submission_present
@@ -130,6 +154,8 @@ steps:
           product_repo_present: "${product_repo_present}"
           web_repo_present: "${web_repo_present}"
           v_eval_present: "${v_eval_present}"
+          v_gemini_present: "${v_gemini_present}"
+          secure_enablement_present: "${secure_enablement_present}"
           submission_present: "${submission_present}"
           browser_contract_opened: "${browser_contract.opened}"
           account_email_alias: "jesus.cgalaviz@gmail.com"

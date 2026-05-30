@@ -6,6 +6,9 @@ Expected files:
 
 - `v_agent_run.json`
 - `v_eval.json`
+- `v_agent_run_gemini.json`
+- `v_eval_gemini.json`
+- `secure_external_enablement.json`
 - `local_vue_dashboard.png`
 - `local_vue_index.html`
 - `local_v_health.txt`

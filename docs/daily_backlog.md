@@ -21,10 +21,10 @@ External deadline: 2026-06-11 14:00 PDT / 15:00 America/Mexico_City.
 
 ## 2026-05-31 - Gemini connection
 
-- [ ] Configure `GEMINI_API_KEY` or Vertex path.
-- [ ] Verify Gemini response in `agent_reasoning.mode=gemini`.
-- [ ] Capture redacted evidence.
-- [ ] Update video script with exact model used.
+- [x] Configure `GEMINI_API_KEY` through VImport vault and GitHub Actions secret.
+- [x] Verify Gemini response in `agent_reasoning.mode=gemini`.
+- [x] Capture redacted evidence.
+- [x] Update evidence with exact model used.
 
 ## 2026-06-01 - Dynatrace MCP connection
 

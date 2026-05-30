@@ -18,7 +18,7 @@ https://jechaviz.github.io/google_cloud_rapid_agent_hackathon_web/
 
 ## Repository URL
 
-TODO_PUBLIC_REPO_URL
+https://github.com/jechaviz/google_cloud_rapid_agent_hackathon
 
 ## Video URL
 
@@ -34,8 +34,9 @@ approval-gated remediation steps with an evidence pack for audit and postmortem.
 The demo starts with a checkout latency incident after a canary release. The
 agent classifies severity and impact, selects a Dynatrace MCP investigation
 tool, correlates the suspected Cloud Run revision, proposes a reversible traffic
-shift, and generates a SHA-256 evidence digest. The default mode keeps all
-mutating actions gated by human approval.
+shift, and generates a SHA-256 evidence digest. The evidence pack now includes
+a real Gemini run plus a deterministic fallback run for judging repeatability.
+The default mode keeps all mutating actions gated by human approval.
 
 ## Technologies used
 

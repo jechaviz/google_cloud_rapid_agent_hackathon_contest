@@ -1,0 +1,43 @@
+﻿{
+    "schema":  "aegisops.secure_external_enablement.v1",
+    "generated_at":  "2026-05-30T03:18:49Z",
+    "account_email_alias":  "jesus.cgalaviz@gmail.com",
+    "credential_policy":  "vimport_vault_refs_only; no browser password extraction; no raw secrets in yaml/repos/logs",
+    "gemini":  {
+                   "vimport_vault_ref":  "VAULT:google_cloud_rapid_agent_hackathon:GEMINI_API_KEY",
+                   "vimport_fingerprint":  "bafe91570894",
+                   "github_actions_secret":  "GEMINI_API_KEY",
+                   "github_actions_secret_configured":  true,
+                   "runtime_evidence":  "evidence/v_agent_run_gemini.json"
+               },
+    "google_cloud":  {
+                         "sdk_path":  "C:/Users/jecha/GoogleCloudSDK/google-cloud-sdk/bin/gcloud.cmd",
+                         "sdk_installed":  true,
+                         "active_cli_accounts":  0,
+                         "project_status":  "unset",
+                         "required_next_refs":  [
+                                                    "VAULT:google_cloud_rapid_agent_hackathon:GCP_PROJECT_ID",
+                                                    "VAULT:google_cloud_rapid_agent_hackathon:GCP_SA_KEY"
+                                                ]
+                     },
+    "dynatrace":  {
+                      "private_profile_token_found":  false,
+                      "mcp_adapter_ready":  true,
+                      "required_next_refs":  [
+                                                 "VAULT:google_cloud_rapid_agent_hackathon:DYNATRACE_MCP_URL",
+                                                 "VAULT:google_cloud_rapid_agent_hackathon:DYNATRACE_MCP_TOKEN"
+                                             ]
+                  },
+    "browser_login_refs":  {
+                               "refs_file_present":  true,
+                               "edge_session_authorized":  true,
+                               "raw_password_export":  false,
+                               "stop_for":  [
+                                                "mfa",
+                                                "captcha",
+                                                "billing",
+                                                "terms_acceptance",
+                                                "irreversible_submit"
+                                            ]
+                           }
+}

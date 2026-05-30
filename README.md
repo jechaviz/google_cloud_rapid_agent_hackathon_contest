@@ -93,6 +93,8 @@ El paquete de entrega vive en:
 - `submission/devpost_form_draft.md`
 - `evidence/v_agent_run.json`
 - `evidence/v_eval.json`
+- `evidence/v_agent_run_gemini.json`
+- `evidence/secure_external_enablement.json`
 
 La automatizacion de submission esta en `scripts/devpost_submission_automation.py`.
 Por seguridad, prepara y llena formularios en una sesion autorizada, pero no hace

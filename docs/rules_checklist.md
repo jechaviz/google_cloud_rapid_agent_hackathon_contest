@@ -27,7 +27,7 @@ Verificado el 2026-05-29 contra Devpost rules y overview.
   control humano.
 - [x] No dependencia core de cloud competidor.
 - [ ] Conectar token real Dynatrace y capturar evidencia, si hay acceso.
-- [ ] Conectar Gemini real y capturar evidencia, si hay API key.
+- [x] Conectar Gemini real y capturar evidencia, si hay API key.
 
 ## Submission requirements
 
@@ -56,6 +56,7 @@ Verificado el 2026-05-29 contra Devpost rules y overview.
 
 - [x] Run tests.
 - [x] Regenerar `evidence/v_agent_run.json`.
+- [x] Regenerar `evidence/v_agent_run_gemini.json`.
 - [x] Revisar screenshots/video por secretos.
 - [ ] Confirmar Devpost draft.
 - [ ] Ejecutar submit solo con confirmacion humana explicita.
