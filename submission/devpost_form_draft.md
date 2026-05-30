@@ -14,7 +14,7 @@ Dynatrace
 
 ## Project URL
 
-TODO_CLOUD_RUN_URL
+https://jechaviz.github.io/google_cloud_rapid_agent_hackathon_web/
 
 ## Repository URL
 
