@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+server.log
+server.err.log
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+# Keep sanitized evidence, ignore raw local captures by default.
+evidence/*.raw.json
+evidence/*.log
