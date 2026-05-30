@@ -31,8 +31,10 @@ Verificado el 2026-05-29 contra Devpost rules y overview.
 
 ## Submission requirements
 
-- [ ] Hosted Project URL publica y estable.
-- [ ] Public open-source repo URL.
+- [x] Hosted Project URL publica y estable:
+  `https://jechaviz.github.io/google_cloud_rapid_agent_hackathon_web/`.
+- [x] Public open-source repo URL:
+  `https://github.com/jechaviz/google_cloud_rapid_agent_hackathon`.
 - [x] License file visible: MIT.
 - [ ] Text description con features, tecnologias, datos y aprendizajes.
 - [ ] Demo video publico/no listado, aproximadamente 3 minutos.
@@ -52,8 +54,8 @@ Verificado el 2026-05-29 contra Devpost rules y overview.
 
 ## Final submit gate
 
-- [ ] Run tests.
-- [ ] Regenerar `evidence/sample_agent_run.json`.
+- [x] Run tests.
+- [x] Regenerar `evidence/v_agent_run.json`.
 - [ ] Revisar screenshots/video por secretos.
 - [ ] Confirmar Devpost draft.
 - [ ] Ejecutar submit solo con confirmacion humana explicita.

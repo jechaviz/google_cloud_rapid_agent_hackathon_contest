@@ -1,0 +1,40 @@
+{
+	"brand":	"Veloclaw",
+	"version":	"0.10.3",
+	"providers":	[{
+			"name":	"openai",
+			"kind":	"openai-compatible",
+			"endpoint":	"env:OPENAI_BASE_URL",
+			"priority":	10,
+			"enabled":	true
+		}, {
+			"name":	"local",
+			"kind":	"ollama-compatible",
+			"endpoint":	"http://127.0.0.1:11434/v1",
+			"priority":	20,
+			"enabled":	false
+		}],
+	"channels":	[{
+			"name":	"cli",
+			"kind":	"terminal",
+			"policy":	"trusted-main",
+			"enabled":	true
+		}, {
+			"name":	"webhook",
+			"kind":	"http",
+			"policy":	"pairing-required",
+			"enabled":	false
+		}, {
+			"name":	"git",
+			"kind":	"repo-event",
+			"policy":	"read-only",
+			"enabled":	true
+		}],
+	"security":	{
+		"autonomy":	"supervised",
+		"workspace":	"cwd",
+		"allowed":	["read", "write-workspace", "git-read", "http-read"],
+		"denied":	["delete-outside-workspace", "secret-exfiltration", "unsupervised-deploy"]
+	},
+	"features":	["local-first-gateway", "provider-failover", "append-only-memory", "skill-promotion", "skill-mesh", "library-innovation-broker", "online-upstream-radar", "permanent-improvement-loop", "spaceship-internal-hosting", "common-library-waves", "vimport-capability-waves", "vimport-common-bridges", "vimport-activation-plan", "vimport-activation-status", "tool-receipts", "git-native-sessions"]
+}

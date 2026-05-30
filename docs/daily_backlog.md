@@ -1,6 +1,6 @@
 # Daily backlog
 
-Current date: 2026-05-29.
+Current date: 2026-05-30.
 External deadline: 2026-06-11 14:00 PDT / 15:00 America/Mexico_City.
 
 ## 2026-05-29 - Scaffold and task
@@ -9,14 +9,15 @@ External deadline: 2026-06-11 14:00 PDT / 15:00 America/Mexico_City.
 - [x] Pick partner track: Dynatrace.
 - [x] Create MVP agent scaffold.
 - [x] Create Devpost task package.
-- [ ] Run local smoke tests and generate first evidence JSON.
+- [x] Run local smoke tests and generate first evidence JSON.
 
 ## 2026-05-30 - Local product polish
 
-- [ ] Install deps in venv.
-- [ ] Run UI locally and capture `evidence/local_ui.png`.
-- [ ] Tighten UI copy and sample incident.
-- [ ] Add README screenshot if useful.
+- [x] Replace Python scaffold assumptions with Vlang product repo.
+- [x] Run UI locally and capture `evidence/local_vue_dashboard.png`.
+- [x] Publish hosted dashboard on GitHub Pages.
+- [x] Add profile-derived evidence through VImport.
+- [x] Add WAIBAv/Veloclaw automation receipt path.
 
 ## 2026-05-31 - Gemini connection
 

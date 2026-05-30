@@ -4,8 +4,16 @@ Generated evidence belongs here. Commit only sanitized artifacts.
 
 Expected files:
 
-- `sample_agent_run.json`
-- `local_ui.png`
+- `v_agent_run.json`
+- `v_eval.json`
+- `local_vue_dashboard.png`
+- `local_vue_index.html`
+- `local_v_health.txt`
+- `local_v_post_run.json`
+- `profile/redacted_source_manifest.json`
+- `profile/application_packet.json`
+- `profile_secure_inputs.template.json`
+- `automation/waibav_submission_receipt.json`
 - `cloud_run_health.txt`
 - `cloud_run_service.txt`
 - `dynatrace_mcp_tools.txt`

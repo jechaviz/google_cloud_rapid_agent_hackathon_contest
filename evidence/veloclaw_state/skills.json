@@ -1,0 +1,21 @@
+{
+	"skills":	[{
+			"name":	"safe_patch_plan",
+			"summary":	"Turn a user request into observe/explain/probe/verify steps before editing files.",
+			"source":	"seed",
+			"uses":	0,
+			"updated_at":	"1780108065463"
+		}, {
+			"name":	"git_capsule",
+			"summary":	"Capture branch, status, intent, and receipts so agent work can be reviewed like Git history.",
+			"source":	"seed",
+			"uses":	0,
+			"updated_at":	"1780108065463"
+		}, {
+			"name":	"risk_gate",
+			"summary":	"Classify operations as low, medium, or high risk and require approval for high-risk tool use.",
+			"source":	"seed",
+			"uses":	0,
+			"updated_at":	"1780108065463"
+		}]
+}

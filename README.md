@@ -28,30 +28,28 @@ Fuentes verificadas el 2026-05-29:
 ## Quickstart local
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -e .
-python -m agentic_incident_ops --sample
-uvicorn agentic_incident_ops.web:app --reload --port 8080
+cd C:\git\v_projects\google_cloud_rapid_agent_hackathon
+v test .
+v run cmd\agent --sample
+v run cmd\agent serve --port 8080
 ```
 
-Si usas `uv`, el camino corto es:
+Para abrir el dashboard local:
 
 ```powershell
-uv run python -m unittest discover
-uv run python -m agentic_incident_ops --sample
-uv run uvicorn agentic_incident_ops.web:app --reload --port 8080
+v run C:\git\websites\google_cloud_rapid_agent_hackathon\tools\static_server.v C:\git\websites\google_cloud_rapid_agent_hackathon 8902
 ```
 
-Luego abre http://127.0.0.1:8080 y ejecuta la demo desde el formulario.
+Luego abre http://127.0.0.1:8902. El dashboard hospedado para jueces esta en
+https://jechaviz.github.io/google_cloud_rapid_agent_hackathon_web/.
 
 ## Modo con Gemini y MCP
 
-Copia `.env.example` a `.env` o configura variables de entorno equivalentes:
+Configura variables de entorno equivalentes o usa refs de VImport vault:
 
 ```powershell
 $env:GEMINI_API_KEY="..."
-$env:GOOGLE_GENAI_MODEL="gemini-3.5-flash"
+$env:GOOGLE_GENAI_MODEL="gemini-2.5-flash"
 $env:DYNATRACE_MCP_URL="https://ENV.apps.dynatrace.com/platform-reserved/mcp-gateway/v0.1/servers/dynatrace-mcp/mcp"
 $env:DYNATRACE_MCP_TOKEN="..."
 ```
@@ -65,7 +63,8 @@ acciones peligrosas se emiten como propuestas con `approval_required: true`.
 - Dashboard web: `C:\git\websites\google_cloud_rapid_agent_hackathon`
 - `docs/`: plan Devpost, checklist de reglas, video outline, backlog y evidencia.
 - `submission/`: borrador de campos para Devpost.
-- `scripts/`: wrappers de evidence/submission y automatizacion de formulario.
+- `automation/`: playbooks WAIBAv para readiness y no-submit gates.
+- `scripts/`: wrappers de evidence/submission, video y automatizacion de formulario.
 
 ## Deploy Cloud Run
 
@@ -90,6 +89,7 @@ El paquete de entrega vive en:
 - `docs/evidence_pack.md`
 - `docs/video_outline.md`
 - `docs/daily_backlog.md`
+- `docs/waibav_veloclaw_automation.md`
 - `submission/devpost_form_draft.md`
 - `evidence/v_agent_run.json`
 - `evidence/v_eval.json`

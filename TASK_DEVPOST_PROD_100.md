@@ -23,9 +23,9 @@ video de aproximadamente 3 minutos, evidencia reproducible y formulario completo
 
 ## Alcance prod 100
 
-- MVP funcional web: FastAPI app con formulario, endpoint `/api/agent/run`,
-  sample incident, plan multi-step, propuestas de accion y evidencia JSON.
-- Google integration: Gemini model configurable por `GOOGLE_GENAI_MODEL`, deploy
+- MVP funcional web: backend V con endpoint `/api/agent/run`, sample incident,
+  plan multi-step, propuestas de accion y evidencia JSON.
+- Google integration: Gemini REST configurable por `GOOGLE_GENAI_MODEL`, deploy
   Cloud Run, variables para Google Cloud project/location y Secret Manager.
 - MCP integration: adaptador Dynatrace MCP remoto por URL/token, con modo demo
   determinista si no hay credenciales.
@@ -41,19 +41,21 @@ video de aproximadamente 3 minutos, evidencia reproducible y formulario completo
 
 ## Criterios de aceptacion
 
-- `python -m unittest discover` pasa en local.
-- `python -m agentic_incident_ops --sample` devuelve JSON con:
+- `v test .` pasa en el repo de producto.
+- `v run cmd\agent --sample` devuelve JSON con:
   - `track=agentic_incident_ops`
   - `partner_track=Dynatrace`
   - `google_integration.cloud_runtime` con Cloud Run
   - `mcp_integration.tools` no vacio
   - acciones con `approval_required=true` por default
   - `evidence.digest_sha256`
-- `uvicorn agentic_incident_ops.web:app --port 8080` levanta UI local.
+- `v run cmd\agent serve --port 8080` levanta API local.
+- Dashboard Vue3 CDN + SFC + UnoCSS funciona local y en GitHub Pages.
 - `Dockerfile` construye la app para Cloud Run.
 - `LICENSE` existe y es visible en root del repo.
 - `submission/devpost_submission.json` tiene campos listos para reemplazar URL.
-- No hay tokens, emails reales, screenshots sensibles ni PII en evidencia.
+- No hay tokens, screenshots sensibles ni PII innecesaria en evidencia; la cuenta
+  autorizada de submission puede aparecer como alias operacional.
 - Antes de submit final, Devpost queda revisado manualmente por humano y el
   script solo ejecuta submit con `--submit` y `CONFIRM_DEVPOST_SUBMIT=YES`.
 

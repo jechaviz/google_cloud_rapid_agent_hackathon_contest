@@ -1,0 +1,316 @@
+{
+	"schema":	"veloclaw.policy.v1",
+	"version":	"default-0.10.3",
+	"default_effect":	"ask",
+	"rules":	[{
+			"name":	"allow-read-workspace",
+			"effect":	"allow",
+			"verb":	"read",
+			"object":	"*",
+			"scope":	"workspace",
+			"constraints":	{
+			},
+			"reason":	"workspace reads are allowed with receipts"
+		}, {
+			"name":	"allow-compile-environment",
+			"effect":	"allow",
+			"verb":	"compile",
+			"object":	"environment",
+			"scope":	"workspace",
+			"constraints":	{
+			},
+			"reason":	"environment compilation is read-only projection plus receipts"
+		}, {
+			"name":	"allow-plan-speed",
+			"effect":	"allow",
+			"verb":	"plan",
+			"object":	"speed",
+			"scope":	"workspace",
+			"constraints":	{
+			},
+			"reason":	"operable speed planning is read-only architecture projection"
+		}, {
+			"name":	"allow-render-goal-surface",
+			"effect":	"allow",
+			"verb":	"render",
+			"object":	"surface",
+			"scope":	"workspace",
+			"constraints":	{
+			},
+			"reason":	"goal surface rendering is local read-only inspection"
+		}, {
+			"name":	"allow-scan-v-project-ecosystem",
+			"effect":	"allow",
+			"verb":	"scan",
+			"object":	"ecosystem",
+			"scope":	"workspace",
+			"constraints":	{
+				"root":	"C:\\git\\v_projects*"
+			},
+			"reason":	"ecosystem scans read local V project manifests and git summaries"
+		}, {
+			"name":	"allow-import-v-project-ecosystem",
+			"effect":	"allow",
+			"verb":	"import",
+			"object":	"ecosystem",
+			"scope":	"workspace",
+			"constraints":	{
+				"root":	"C:\\git\\v_projects*"
+			},
+			"reason":	"ecosystem import writes a local registry under Veloclaw state"
+		}, {
+			"name":	"allow-plan-v-project-integrations",
+			"effect":	"allow",
+			"verb":	"plan",
+			"object":	"integration",
+			"scope":	"workspace",
+			"constraints":	{
+				"root":	"C:\\git\\v_projects*"
+			},
+			"reason":	"integration planning is a local architecture projection"
+		}, {
+			"name":	"allow-scan-skillmesh",
+			"effect":	"allow",
+			"verb":	"scan",
+			"object":	"skillmesh",
+			"scope":	"workspace",
+			"constraints":	{
+				"root":	"C:\\git\\v_projects\\veloclaw_skill_mesh*"
+			},
+			"reason":	"skill mesh scans read local versioned skill manifests"
+		}, {
+			"name":	"allow-import-skillmesh",
+			"effect":	"allow",
+			"verb":	"import",
+			"object":	"skillmesh",
+			"scope":	"workspace",
+			"constraints":	{
+				"root":	"C:\\git\\v_projects\\veloclaw_skill_mesh*"
+			},
+			"reason":	"skill mesh import writes a local registry under Veloclaw state"
+		}, {
+			"name":	"allow-plan-skillmesh",
+			"effect":	"allow",
+			"verb":	"plan",
+			"object":	"skillmesh",
+			"scope":	"workspace",
+			"constraints":	{
+				"root":	"C:\\git\\v_projects\\veloclaw_skill_mesh*"
+			},
+			"reason":	"skill mesh planning is a local adapter projection"
+		}, {
+			"name":	"allow-plan-autonomy",
+			"effect":	"allow",
+			"verb":	"plan",
+			"object":	"autonomy",
+			"scope":	"workspace",
+			"constraints":	{
+			},
+			"reason":	"autonomy planning is read-only token economy projection"
+		}, {
+			"name":	"allow-observe-online-upstream",
+			"effect":	"allow",
+			"verb":	"observe",
+			"object":	"upstream",
+			"scope":	"online",
+			"constraints":	{
+				"source":	"*"
+			},
+			"reason":	"online upstream radar is a curated read-only provenance projection"
+		}, {
+			"name":	"allow-adapt-upstream-roadmap",
+			"effect":	"allow",
+			"verb":	"adapt",
+			"object":	"upstream",
+			"scope":	"workspace",
+			"constraints":	{
+				"root":	"C:\\git\\v_projects*"
+			},
+			"reason":	"upstream adaptation planning is non-executing roadmap projection"
+		}, {
+			"name":	"allow-plan-permanent-improvement",
+			"effect":	"allow",
+			"verb":	"plan",
+			"object":	"improvement",
+			"scope":	"runtime",
+			"constraints":	{
+				"mode":	"permanent"
+			},
+			"reason":	"permanent improvement planning is a read-only control contract"
+		}, {
+			"name":	"allow-plan-spaceship-internal-deploy",
+			"effect":	"allow",
+			"verb":	"plan",
+			"object":	"deployment",
+			"scope":	"spaceship",
+			"constraints":	{
+				"mode":	"internal"
+			},
+			"reason":	"Spaceship internal deployment planning is non-public and non-mutating"
+		}, {
+			"name":	"allow-plan-common-libraries",
+			"effect":	"allow",
+			"verb":	"plan",
+			"object":	"common_libraries",
+			"scope":	"workspace",
+			"constraints":	{
+				"root":	"C:\\git\\v_projects*"
+			},
+			"reason":	"common library wave planning is read-only architecture projection"
+		}, {
+			"name":	"allow-plan-vimport-capabilities",
+			"effect":	"allow",
+			"verb":	"plan",
+			"object":	"vimport_capabilities",
+			"scope":	"workspace",
+			"constraints":	{
+				"root":	"C:\\git\\v_projects*"
+			},
+			"reason":	"VImport capability planning is read-only architecture projection"
+		}, {
+			"name":	"allow-plan-vimport-common-bridges",
+			"effect":	"allow",
+			"verb":	"plan",
+			"object":	"vimport_common",
+			"scope":	"workspace",
+			"constraints":	{
+				"root":	"C:\\git\\v_projects*"
+			},
+			"reason":	"VImport/common bridge planning is read-only architecture projection"
+		}, {
+			"name":	"allow-plan-vimport-activation",
+			"effect":	"allow",
+			"verb":	"plan",
+			"object":	"vimport_activation",
+			"scope":	"workspace",
+			"constraints":	{
+				"root":	"C:\\git\\v_projects*"
+			},
+			"reason":	"VImport activation planning is a capsule-only non-executing promotion queue"
+		}, {
+			"name":	"allow-propose-capsule",
+			"effect":	"allow",
+			"verb":	"propose",
+			"object":	"capsule",
+			"scope":	"git",
+			"constraints":	{
+			},
+			"reason":	"capsule proposals are non-mutating"
+		}, {
+			"name":	"allow-import-waiba-eskill",
+			"effect":	"allow",
+			"verb":	"import",
+			"object":	"eskill",
+			"scope":	"runtime",
+			"constraints":	{
+				"name":	"waiba",
+				"root":	"C:\\Users\\jecha\\.waiba"
+			},
+			"reason":	"WAIBA import is read-only registration of the trusted local automation runtime"
+		}, {
+			"name":	"allow-read-eskill-registry",
+			"effect":	"allow",
+			"verb":	"read",
+			"object":	"eskill",
+			"scope":	"runtime",
+			"constraints":	{
+				"name":	"*"
+			},
+			"reason":	"external skill registry reads are non-mutating"
+		}, {
+			"name":	"allow-propose-eskill-manifest",
+			"effect":	"allow",
+			"verb":	"propose",
+			"object":	"eskill",
+			"scope":	"runtime",
+			"constraints":	{
+				"runtime":	"waiba"
+			},
+			"reason":	"ESkill manifests are non-executing capability contracts"
+		}, {
+			"name":	"allow-verify-eskill-manifest",
+			"effect":	"allow",
+			"verb":	"verify",
+			"object":	"eskill",
+			"scope":	"runtime",
+			"constraints":	{
+				"runtime":	"waiba"
+			},
+			"reason":	"ESkill manifest verification is read-only"
+		}, {
+			"name":	"ask-write-workspace",
+			"effect":	"ask",
+			"verb":	"write",
+			"object":	"*",
+			"scope":	"workspace",
+			"constraints":	{
+			},
+			"reason":	"workspace writes require operator approval"
+		}, {
+			"name":	"ask-run-workspace",
+			"effect":	"ask",
+			"verb":	"run",
+			"object":	"*",
+			"scope":	"workspace",
+			"constraints":	{
+			},
+			"reason":	"local command execution needs approval"
+		}, {
+			"name":	"ask-waiba-debug-run",
+			"effect":	"ask",
+			"verb":	"run",
+			"object":	"waiba",
+			"scope":	"automation",
+			"constraints":	{
+				"env":	"debug"
+			},
+			"reason":	"WAIBA debug runs can execute local automation and need approval"
+		}, {
+			"name":	"quarantine-waiba-online-run",
+			"effect":	"quarantine",
+			"verb":	"run",
+			"object":	"waiba",
+			"scope":	"automation",
+			"constraints":	{
+				"env":	"online"
+			},
+			"reason":	"WAIBA online automation is quarantined until target/session policy is reviewed"
+		}, {
+			"name":	"ask-waiba-browser-evidence",
+			"effect":	"ask",
+			"verb":	"capture",
+			"object":	"evidence",
+			"scope":	"waiba",
+			"constraints":	{
+				"kind":	"browser"
+			},
+			"reason":	"browser evidence can contain private page or credential-adjacent data"
+		}, {
+			"name":	"block-skill-activation",
+			"effect":	"block",
+			"verb":	"activate",
+			"object":	"skill",
+			"scope":	"*",
+			"constraints":	{
+			},
+			"reason":	"skills cannot self-activate"
+		}, {
+			"name":	"block-production",
+			"effect":	"block",
+			"verb":	"*",
+			"object":	"*",
+			"scope":	"production",
+			"constraints":	{
+			},
+			"reason":	"production scope is blocked by default"
+		}, {
+			"name":	"quarantine-secret-network",
+			"effect":	"quarantine",
+			"verb":	"send",
+			"object":	"*",
+			"scope":	"network",
+			"constraints":	{
+			},
+			"reason":	"network sends are quarantined until a channel policy exists"
+		}]
+}

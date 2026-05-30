@@ -1,9 +1,12 @@
 # Devpost automation
 
-Script: `scripts/devpost_submission_automation.py`
+Primary automation: `automation/waibav_submission_ready.playbook.yml`
 
-Purpose: prepare and fill the Google Cloud Rapid Agent Hackathon Devpost form
-from `submission/devpost_submission.json`.
+Fallback script: `scripts/devpost_submission_automation.py`
+
+Purpose: prepare the Google Cloud Rapid Agent Hackathon Devpost package from
+`submission/devpost_submission.json`, verify local/hosted evidence, and keep the
+final external submit behind a human gate.
 
 ## Safety gates
 
@@ -19,10 +22,13 @@ from `submission/devpost_submission.json`.
 ## Dry run
 
 ```powershell
-pip install -e .[automation]
-playwright install chromium
-python scripts/devpost_submission_automation.py
+v run C:\git\v_projects\waibav validate automation\waibav_submission_ready.playbook.yml prod
+v run C:\git\v_projects\waibav audit automation\waibav_submission_ready.playbook.yml prod
+v run C:\git\v_projects\waibav run automation\waibav_submission_ready.playbook.yml prod
 ```
+
+The Python script is kept as a fallback for a workstation with Python,
+Playwright, and a reviewed browser profile already configured.
 
 ## Final submit
 
@@ -32,6 +38,10 @@ Use only after human review:
 $env:CONFIRM_DEVPOST_SUBMIT="YES"
 python scripts/devpost_submission_automation.py --submit
 ```
+
+Use the logged-in Edge/Gmail session only for the authorized account
+`jesus.cgalaviz@gmail.com`. CAPTCHA, payment, unexpected permissions, and final
+submit confirmation stay as manual handoff gates.
 
 ## Fields source
 

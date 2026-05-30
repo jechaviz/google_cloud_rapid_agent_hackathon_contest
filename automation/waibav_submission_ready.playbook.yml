@@ -1,0 +1,161 @@
+metadata:
+  name: aegisops-submission-ready
+
+variables:
+  CONTEST_DIR: "${ROOT_PLAYBOOK_DIR}\\.."
+  OUTPUT_DIR: "${CONTEST_DIR}\\evidence\\automation"
+  TRACE_PATH: "${OUTPUT_DIR}\\waibav_submission_trace.jsonl"
+  RECEIPT_PATH: "${OUTPUT_DIR}\\waibav_submission_receipt.json"
+  PROFILE_YAML: "C:\\git\\customers\\yo\\profile\\jecha_profile.yml"
+  PRODUCT_REPO: "C:\\git\\v_projects\\google_cloud_rapid_agent_hackathon"
+  WEB_REPO: "C:\\git\\websites\\google_cloud_rapid_agent_hackathon"
+  DEMO_URL: "https://jechaviz.github.io/google_cloud_rapid_agent_hackathon_web/"
+
+steps:
+  prod:
+    - name: Prepare automation evidence
+      action: FS.EnsureDir
+      params:
+        path: "${OUTPUT_DIR}"
+
+    - name: Trace start
+      action: Trace.Event
+      params:
+        path: "${TRACE_PATH}"
+        name: "submission_readiness_start"
+        message: "WAIBAv submission readiness check started."
+        data:
+          contest_dir: "${CONTEST_DIR}"
+          demo_url: "${DEMO_URL}"
+
+    - name: Check profile source
+      action: FS.Exists
+      register: profile_present
+      params:
+        path: "${PROFILE_YAML}"
+
+    - name: Require profile source
+      action: Fail
+      if_not: "${profile_present}"
+      params:
+        message: "Customer profile YAML is required for authorized submission/account context."
+
+    - name: Check profile-derived secure input template
+      action: FS.Exists
+      register: secure_inputs_present
+      params:
+        path: "${CONTEST_DIR}\\evidence\\profile_secure_inputs.template.json"
+
+    - name: Require secure input template
+      action: Fail
+      if_not: "${secure_inputs_present}"
+      params:
+        message: "Profile secure input template is missing."
+
+    - name: Check V product repo
+      action: FS.Exists
+      register: product_repo_present
+      params:
+        path: "${PRODUCT_REPO}\\cmd\\agent\\main.v"
+
+    - name: Require V product repo
+      action: Fail
+      if_not: "${product_repo_present}"
+      params:
+        message: "V product repo is missing."
+
+    - name: Check Vue demo repo
+      action: FS.Exists
+      register: web_repo_present
+      params:
+        path: "${WEB_REPO}\\index.html"
+
+    - name: Require Vue demo repo
+      action: Fail
+      if_not: "${web_repo_present}"
+      params:
+        message: "Vue demo repo is missing."
+
+    - name: Check V evaluation evidence
+      action: FS.Exists
+      register: v_eval_present
+      params:
+        path: "${CONTEST_DIR}\\evidence\\v_eval.json"
+
+    - name: Require V evaluation evidence
+      action: Fail
+      if_not: "${v_eval_present}"
+      params:
+        message: "V evaluation evidence is missing."
+
+    - name: Check Devpost submission draft
+      action: FS.Exists
+      register: submission_present
+      params:
+        path: "${CONTEST_DIR}\\submission\\devpost_submission.json"
+
+    - name: Require Devpost submission draft
+      action: Fail
+      if_not: "${submission_present}"
+      params:
+        message: "Devpost submission draft is missing."
+
+    - name: Verify hosted dashboard
+      action: HTTP.Get
+      register: hosted_demo
+      params:
+        url: "${DEMO_URL}"
+        timeout_ms: 15000
+
+    - name: Mock browser launch contract
+      action: Browser.Open
+      register: browser_contract
+      params:
+        mock: true
+        url: "${DEMO_URL}"
+
+    - name: Write readiness receipt
+      action: FS.WriteJson
+      params:
+        path: "${RECEIPT_PATH}"
+        value:
+          version: "waibav.submission_readiness.v1"
+          ok: true
+          contest_dir: "${CONTEST_DIR}"
+          demo_url: "${DEMO_URL}"
+          demo_http_ok: "${hosted_demo.ok}"
+          demo_http_status: "${hosted_demo.status}"
+          profile_present: "${profile_present}"
+          secure_inputs_present: "${secure_inputs_present}"
+          product_repo_present: "${product_repo_present}"
+          web_repo_present: "${web_repo_present}"
+          v_eval_present: "${v_eval_present}"
+          submission_present: "${submission_present}"
+          browser_contract_opened: "${browser_contract.opened}"
+          account_email_alias: "jesus.cgalaviz@gmail.com"
+          credential_storage_policy: "vimport_vault_refs_only"
+          final_submit_gate: "manual confirmation required"
+
+    - name: Mark evidence task completed
+      action: Framework.MarkTaskCompleted
+      params:
+        project_dir: "${OUTPUT_DIR}"
+        task_name: "waibav_submission_ready"
+        summary: "Hosted demo, local repos, profile-derived inputs, and Devpost draft passed WAIBAv readiness gates."
+        artifacts:
+          - "${RECEIPT_PATH}"
+          - "${TRACE_PATH}"
+
+    - name: Trace complete
+      action: Trace.Event
+      params:
+        path: "${TRACE_PATH}"
+        name: "submission_readiness_complete"
+        message: "WAIBAv submission readiness check completed."
+        data:
+          receipt_path: "${RECEIPT_PATH}"
+
+  debug:
+    - action: Note
+      params:
+        text: "WAIBAv submission readiness debug path alive."
