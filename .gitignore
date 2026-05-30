@@ -15,3 +15,4 @@ evidence/*.raw.json
 evidence/*.log
 evidence/demo_video.webm
 evidence/demo_video_frame.png
+evidence/video/

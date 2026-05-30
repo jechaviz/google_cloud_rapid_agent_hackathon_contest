@@ -50,9 +50,9 @@ External deadline: 2026-06-11 14:00 PDT / 15:00 America/Mexico_City.
 ## 2026-06-04 - Credits and rough video
 
 - [ ] Confirm Google credits/billing before credit request deadline.
-- [ ] Record rough video.
-- [ ] Upload rough video unlisted.
-- [ ] Fill Devpost draft URLs if available.
+- [x] Record rough video.
+- [x] Upload rough video as public release asset.
+- [x] Fill Devpost draft URLs if available.
 
 ## 2026-06-05 - Judge UX pass
 
@@ -73,7 +73,7 @@ External deadline: 2026-06-11 14:00 PDT / 15:00 America/Mexico_City.
 - [ ] Record final demo.
 - [ ] Produce transcript.
 - [ ] Upload final public/unlisted video.
-- [ ] Add video URL to submission JSON.
+- [x] Add video URL to submission JSON.
 
 ## 2026-06-08 - Submission automation dry run
 

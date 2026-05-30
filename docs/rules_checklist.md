@@ -37,8 +37,8 @@ Verificado el 2026-05-29 contra Devpost rules y overview.
   `https://github.com/jechaviz/google_cloud_rapid_agent_hackathon`.
 - [x] License file visible: MIT.
 - [ ] Text description con features, tecnologias, datos y aprendizajes.
-- [ ] Demo video publico/no listado, aproximadamente 3 minutos.
-- [ ] Video muestra el proyecto funcionando en web.
+- [x] Demo video publico/no listado, aproximadamente 3 minutos.
+- [x] Video muestra el proyecto funcionando en web.
 - [ ] Track seleccionado en Devpost: Dynatrace.
 - [ ] Formulario Devpost completo.
 - [ ] No logos, marcas, claims o materiales de terceros sin autorizacion.
@@ -56,6 +56,6 @@ Verificado el 2026-05-29 contra Devpost rules y overview.
 
 - [x] Run tests.
 - [x] Regenerar `evidence/v_agent_run.json`.
-- [ ] Revisar screenshots/video por secretos.
+- [x] Revisar screenshots/video por secretos.
 - [ ] Confirmar Devpost draft.
 - [ ] Ejecutar submit solo con confirmacion humana explicita.

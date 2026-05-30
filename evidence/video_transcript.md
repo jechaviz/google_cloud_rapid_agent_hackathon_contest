@@ -1,6 +1,6 @@
 # Demo transcript
 
-Project URL: http://127.0.0.1:8902
+Project URL: https://jechaviz.github.io/google_cloud_rapid_agent_hackathon_web/
 
 0:00 AegisOps opens as a hosted Vue dashboard for the Google Cloud Rapid Agent Hackathon.
 

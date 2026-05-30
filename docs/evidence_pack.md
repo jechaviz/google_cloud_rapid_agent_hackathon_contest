@@ -22,8 +22,9 @@ No subir secretos, tokens, emails reales, nombres de clientes ni PII.
 - `evidence/video_transcript.md`: transcript final de demo.
 - `evidence/demo_video_frame.png`: generated screenshot frame, not committed if
   binary line budget exceeds policy.
-- `evidence/demo_video.webm`: generated demo clip, kept local or uploaded to a
-  video host before Devpost submit.
+- `evidence/demo_video.webm`: generated demo clip, uploaded as public release
+  asset:
+  `https://github.com/jechaviz/google_cloud_rapid_agent_hackathon_contest/releases/download/devpost-demo-video-v1/demo_video.webm`.
 - `evidence/devpost_form_prefill.png`: screenshot del draft antes del submit.
 
 ## Comandos

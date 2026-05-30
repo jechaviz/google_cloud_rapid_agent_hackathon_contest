@@ -22,7 +22,7 @@ TODO_PUBLIC_REPO_URL
 
 ## Video URL
 
-TODO_VIDEO_URL
+https://github.com/jechaviz/google_cloud_rapid_agent_hackathon_contest/releases/download/devpost-demo-video-v1/demo_video.webm
 
 ## Description
 
