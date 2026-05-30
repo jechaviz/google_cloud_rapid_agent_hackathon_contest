@@ -2,8 +2,8 @@
 
 ## Google Cloud
 
-- Runtime: Cloud Run web app, compatible con despliegue rapido para judges.
-- AI: Gemini via `google-genai`, model configurable por `GOOGLE_GENAI_MODEL`.
+- Runtime: Cloud Run con backend V HTTP, compatible con despliegue rapido para judges.
+- AI: Gemini REST API, model configurable por `GOOGLE_GENAI_MODEL`.
 - Secrets: usar Secret Manager para `GEMINI_API_KEY`, `DYNATRACE_MCP_TOKEN` y
   `DYNATRACE_MCP_URL`.
 - Observability: Cloud Logging/Cloud Run metrics como fuente de release y
@@ -38,8 +38,9 @@ Permisos minimos segun docs Dynatrace:
 2. MCP discovery: lista herramientas Dynatrace y elige problem/investigate/DQL.
 3. Observacion: trae contexto de problema, blast radius y causalidad.
 4. Google reasoning: Gemini resume riesgo y sugiere acciones bajo constraints.
-5. Remediacion: genera propuestas reversibles con approval gate.
-6. Evidencia: produce digest, artefactos esperados y postmortem seed.
+5. Evaluador: verifica gates Devpost y produce `prod_candidate` cuando pasa.
+6. Remediacion: genera propuestas reversibles con approval gate.
+7. Evidencia: produce digest, artefactos esperados y postmortem seed.
 
 ## Demo sin credenciales
 

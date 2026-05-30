@@ -43,8 +43,8 @@ mutating actions gated by human approval.
 - Gemini via Google GenAI SDK
 - Google Cloud Secret Manager deployment path
 - Dynatrace MCP server
-- FastAPI
-- Python 3.12
+- Vlang
+- Vue3 CDN + SFC + UnoCSS
 - Playwright for authorized Devpost form automation
 
 ## Data sources

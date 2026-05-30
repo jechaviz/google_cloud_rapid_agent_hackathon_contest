@@ -3,12 +3,11 @@
 ## Estructura objetivo
 
 - `README.md`: pitch, quickstart, deploy y Devpost handoff.
-- `src/agentic_incident_ops/`: paquete Python del agente.
-- `src/agentic_incident_ops/web.py`: hosted web app para judges.
-- `src/agentic_incident_ops/agent.py`: orquestacion multi-step.
-- `src/agentic_incident_ops/mcp_dynatrace.py`: cliente Dynatrace MCP.
-- `src/agentic_incident_ops/llm.py`: wrapper Gemini con fallback demo.
-- `scripts/deploy_cloud_run.ps1`: deploy Google Cloud Run.
+- `C:\git\v_projects\google_cloud_rapid_agent_hackathon`: core Vlang,
+  orquestacion, MCP, CLI, evaluador y backend HTTP.
+- `C:\git\websites\google_cloud_rapid_agent_hackathon`: dashboard Vue3 CDN +
+  SFC + UnoCSS.
+- `scripts/run_v_evidence.ps1`: tests V y evidence pack.
 - `scripts/devpost_submission_automation.py`: llenado seguro de Devpost.
 - `docs/`: reglas, evidencia, video, backlog, integracion.
 - `submission/`: campos Devpost y JSON automatizable.
@@ -25,8 +24,8 @@
 ## Gates
 
 - Gate 1: tests unitarios pasan.
-- Gate 2: UI local corre y genera JSON.
-- Gate 3: imagen Docker construye.
+- Gate 2: backend V corre y genera JSON.
+- Gate 3: dashboard Vue se conecta al backend.
 - Gate 4: Cloud Run URL responde `/healthz`.
 - Gate 5: Devpost draft tiene hosted URL, repo URL y video URL.
 - Gate 6: evidence pack no contiene secretos.

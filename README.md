@@ -3,11 +3,11 @@
 Track interno: `agentic_incident_ops`
 Partner Devpost propuesto: `Dynatrace`
 
-AegisOps es un agente de respuesta a incidentes para equipos SRE/DevOps. Toma
-un incidente, consulta contexto operativo por MCP, razona con Gemini en Google
+AegisOps es un agente de respuesta a incidentes para equipos SRE/DevOps. Toma un
+incidente, consulta contexto operativo por MCP, razona con Gemini en Google
 Cloud, propone acciones de contencion y genera evidencia lista para auditoria y
-postmortem. El modo demo corre sin credenciales; el modo produccion conecta
-Gemini y Dynatrace MCP con secretos reales.
+postmortem. El core oficial es Vlang; el dashboard demo vive separado en Vue3
+CDN + SFC + UnoCSS.
 
 ## Por que este proyecto
 
@@ -61,20 +61,25 @@ acciones peligrosas se emiten como propuestas con `approval_required: true`.
 
 ## Estructura
 
-- `src/agentic_incident_ops/`: agente MVP, UI FastAPI y adaptadores.
+- Producto V: `C:\git\v_projects\google_cloud_rapid_agent_hackathon`
+- Dashboard web: `C:\git\websites\google_cloud_rapid_agent_hackathon`
 - `docs/`: plan Devpost, checklist de reglas, video outline, backlog y evidencia.
 - `submission/`: borrador de campos para Devpost.
-- `scripts/`: demo local, deploy Cloud Run y automatizacion de formulario.
-- `tests/`: smoke tests sin credenciales.
+- `scripts/`: wrappers de evidence/submission y automatizacion de formulario.
 
 ## Deploy Cloud Run
 
 ```powershell
-.\scripts\deploy_cloud_run.ps1 -ProjectId YOUR_PROJECT_ID -Region us-central1
+.\scripts\run_v_evidence.ps1
+v run C:\git\v_projects\google_cloud_rapid_agent_hackathon\cmd\agent serve --port 8080
 ```
 
-El script usa Cloud Run, Secret Manager por variables y mantiene el servicio web
-como URL de judging.
+Para deploy productivo:
+
+```powershell
+cd C:\git\v_projects\google_cloud_rapid_agent_hackathon
+.\scripts\deploy_cloud_run.ps1 -ProjectId YOUR_PROJECT_ID -Region us-central1
+```
 
 ## Devpost
 
@@ -86,6 +91,8 @@ El paquete de entrega vive en:
 - `docs/video_outline.md`
 - `docs/daily_backlog.md`
 - `submission/devpost_form_draft.md`
+- `evidence/v_agent_run.json`
+- `evidence/v_eval.json`
 
 La automatizacion de submission esta en `scripts/devpost_submission_automation.py`.
 Por seguridad, prepara y llena formularios en una sesion autorizada, pero no hace

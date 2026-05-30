@@ -5,7 +5,8 @@ No subir secretos, tokens, emails reales, nombres de clientes ni PII.
 
 ## Artefactos obligatorios
 
-- `evidence/sample_agent_run.json`: salida del agente en modo demo.
+- `evidence/v_agent_run.json`: salida del agente V en modo demo.
+- `evidence/v_eval.json`: evaluador V con gates Devpost.
 - `evidence/local_ui.png`: screenshot de UI local con plan generado.
 - `evidence/cloud_run_health.txt`: respuesta de `/healthz` en hosted URL.
 - `evidence/cloud_run_service.txt`: salida redacted de `gcloud run services describe`.
@@ -16,9 +17,9 @@ No subir secretos, tokens, emails reales, nombres de clientes ni PII.
 ## Comandos
 
 ```powershell
-python -m unittest discover
-python -m agentic_incident_ops --sample --output evidence/sample_agent_run.json
-uvicorn agentic_incident_ops.web:app --host 127.0.0.1 --port 8080
+.\scripts\run_v_evidence.ps1
+v run C:\git\v_projects\google_cloud_rapid_agent_hackathon\cmd\agent serve --port 8080
+v run C:\git\websites\google_cloud_rapid_agent_hackathon\tools\static_server.v C:\git\websites\google_cloud_rapid_agent_hackathon 8902
 ```
 
 Cloud Run:

@@ -19,8 +19,8 @@ Verificado el 2026-05-29 contra Devpost rules y overview.
 ## Build requirements
 
 - [x] Proyecto nuevo para el contest: repo creado para este hackathon.
-- [x] Platform: web app.
-- [x] Google Cloud AI: Gemini configurable y Cloud Run deploy path.
+- [x] Platform: web app con backend V y dashboard Vue.
+- [x] Google Cloud AI: Gemini configurable y Cloud Run deploy path V.
 - [x] Partner track: Dynatrace.
 - [x] MCP: adaptador Dynatrace MCP remoto con modo demo.
 - [x] Agent behavior: planifica, usa herramientas, propone acciones y mantiene
@@ -45,8 +45,8 @@ Verificado el 2026-05-29 contra Devpost rules y overview.
 
 ## Judging alignment
 
-- [x] Technological Implementation: FastAPI, Cloud Run, Gemini wrapper, MCP.
-- [x] Design: UI de triage con intake, metricas y plan.
+- [x] Technological Implementation: Vlang core, Cloud Run, Gemini REST, MCP.
+- [x] Design: dashboard Vue de triage con intake, metricas, topologia y plan.
 - [x] Potential Impact: reduce MTTR, evidencia y postmortem.
 - [x] Quality of Idea: incident agent con approval gate y audit trail.
 

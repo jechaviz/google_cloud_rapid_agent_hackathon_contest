@@ -3,7 +3,7 @@
   "tagline": "Gemini and Dynatrace MCP agent for approval-gated incident response.",
   "partner_track": "Dynatrace",
   "project_url": "TODO_CLOUD_RUN_URL",
-  "repo_url": "TODO_PUBLIC_REPO_URL",
+  "repo_url": "https://github.com/jechaviz/google_cloud_rapid_agent_hackathon",
   "video_url": "TODO_VIDEO_URL",
-  "description": "AegisOps is a web-based incident operations agent for SRE and DevOps teams. It takes an active incident, collects structured context, uses Dynatrace MCP for observability intelligence, reasons with Gemini on Google Cloud, and prepares approval-gated remediation steps with an evidence pack for audit and postmortem. The demo starts with a checkout latency incident after a canary release. The agent classifies severity and impact, selects a Dynatrace MCP investigation tool, correlates the suspected Cloud Run revision, proposes a reversible traffic shift, and generates a SHA-256 evidence digest. The default mode keeps all mutating actions gated by human approval."
+  "description": "AegisOps is a Vlang-backed incident operations agent for SRE and DevOps teams with a Vue3 dashboard. It takes an active incident, collects structured context, uses Dynatrace MCP for observability intelligence, reasons with Gemini on Google Cloud, and prepares approval-gated remediation steps with an evidence pack for audit and postmortem. The demo starts with a checkout latency incident after a canary release. The agent classifies severity and impact, selects a Dynatrace MCP investigation tool, correlates the suspected Cloud Run revision, proposes a reversible traffic shift, and generates a SHA-256 evidence digest plus a Devpost readiness evaluation. The default mode keeps all mutating actions gated by human approval."
 }

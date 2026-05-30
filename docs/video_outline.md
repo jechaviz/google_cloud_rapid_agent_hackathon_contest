@@ -20,9 +20,10 @@ a supervised agent run."
 
 Mostrar README o diagrama simple en pantalla:
 
-- Web app on Cloud Run
+- Vlang backend on Cloud Run
 - Gemini reasoning
 - Dynatrace MCP context
+- Vue3 dashboard
 - Approval-gated remediation
 - Evidence pack
 
@@ -61,7 +62,8 @@ keeps the incident commander in control."
 
 ### 2:35-2:55 - Evidence and impact
 
-Mostrar `docs/evidence_pack.md` y `evidence/sample_agent_run.json`.
+Mostrar `docs/evidence_pack.md`, `evidence/v_agent_run.json` y
+`evidence/v_eval.json`.
 
 Narracion: "Every run creates evidence for audit and postmortem. The outcome is
 lower MTTR, safer remediation, and better learning after incidents."
