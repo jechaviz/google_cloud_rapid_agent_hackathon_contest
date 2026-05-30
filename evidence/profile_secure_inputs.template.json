@@ -1,0 +1,21 @@
+{
+  "schema": "vimport.profile_secure_inputs.v1",
+  "opportunity": "google_cloud_rapid_agent_hackathon",
+  "generated_at": "2026-05-29 19:59:49",
+  "storage_policy": "keep this file private; commit only redacted completion receipts",
+  "submit_gate": "human_review_required_before_external_submit",
+  "fields": [
+    {"id":"devpost_project_url","value":"","status":"secure_input_required","public_safe":false},
+    {"id":"devpost_repo_url","value":"","status":"secure_input_required","public_safe":false},
+    {"id":"devpost_video_url","value":"","status":"secure_input_required","public_safe":false},
+    {"id":"devpost_partner_track","value":"","status":"secure_input_required","public_safe":false},
+    {"id":"google_cloud_project_id_vault_ref","value":"","status":"secure_input_required","public_safe":false},
+    {"id":"google_cloud_service_url","value":"","status":"secure_input_required","public_safe":false},
+    {"id":"gemini_api_key_vault_ref","value":"","status":"secure_input_required","public_safe":false},
+    {"id":"dynatrace_mcp_url_vault_ref","value":"","status":"secure_input_required","public_safe":false},
+    {"id":"dynatrace_mcp_token_vault_ref","value":"","status":"secure_input_required","public_safe":false},
+    {"id":"github_pages_demo_url","value":"","status":"secure_input_required","public_safe":false},
+    {"id":"cloud_run_workflow_url","value":"","status":"secure_input_required","public_safe":false},
+    {"id":"final_submit_confirmation","value":"","status":"secure_input_required","public_safe":false}
+  ]
+}

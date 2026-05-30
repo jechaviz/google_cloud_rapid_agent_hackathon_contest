@@ -1,0 +1,19 @@
+{
+  "schema": "vimport.profile_application_packet.v1",
+  "opportunity": "google_cloud_rapid_agent_hackathon",
+  "generated_at": "2026-05-29 19:57:07",
+  "source_manifest_ref": "redacted_source_manifest.json",
+  "privacy_model": "redacted_manifest_only_no_raw_profile_content",
+  "readiness_score": 100,
+  "summary": {
+    "area_count": 14,
+    "safe_summary_areas": 10,
+    "private_areas": 4,
+    "profile_file_count_observed": 3908
+  },
+  "role_counts": {"credential_material_private": 1, "education_or_content_product_proof": 2, "enterprise_workflow_product_proof": 5, "founder_profile_private": 2, "local_project_or_private_profile_area": 1, "tax_compliance_product_proof": 3},
+  "safe_application_claims": ["Founder/product profile shows compliance-heavy SaaS and document workflow depth.","Profile includes enterprise workflow and migration proof that maps well to application-ops execution.","Profile includes education/content product surfaces useful for onboarding and demos.","Founder background evidence exists but must remain private until a secure form session."],
+  "secure_input_gates": ["legal_entity","incorporation_country","total_funding_raised","founder_1","founder_2_or_dedicated_member","paris_attendance","website_demo_deck_video_urls"],
+  "automation_routes": ["VImport profile-manifest","VImport profile-application-packet","VImport profile-secure-inputs","Veloclaw policy/capability snapshot","WAIBAv profile packet receipt","WAIBAv visible Dealum draft session"],
+  "recommended_next_actions": ["Fill secure input template locally, outside public git.","Run WAIBAv profile packet playbook after every profile manifest refresh.","Attach public packet and private secure fields in the authenticated Dealum session.","Capture final submit receipt only after human review."]
+}

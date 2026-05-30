@@ -1,0 +1,28 @@
+{
+  "schema": "vimport.redacted_profile_manifest.v1",
+  "label": "google_cloud_rapid_agent_hackathon",
+  "generated_at": "2026-05-29 19:56:36",
+  "source_root_ref": "local_profile_root",
+  "redaction_policy": "path names and document contents are not exported",
+  "areas": [
+    {"id":"area_001","role":"education_or_content_product_proof","risk":"safe_summary_only","file_count":33,"dir_count":12,"capped":false,"extensions":["db","exe","html","js","json","lock","md","ps1","py","toml","ts","txt"]},
+    {"id":"area_002","role":"education_or_content_product_proof","risk":"safe_summary_only","file_count":41,"dir_count":10,"capped":false,"extensions":["ahk","css","html","ipynb","js","json","jsonl","md","png","svg","vue","yml"]},
+    {"id":"area_003","role":"credential_material_private","risk":"private_no_content_export","file_count":2,"dir_count":0,"capped":false,"extensions":["cer","key"]},
+    {"id":"area_004","role":"founder_profile_private","risk":"private_no_content_export","file_count":79,"dir_count":12,"capped":false,"extensions":["css","html","js","md","pdf","png","svg","vue"]},
+    {"id":"area_005","role":"tax_compliance_product_proof","risk":"safe_summary_only","file_count":459,"dir_count":113,"capped":false,"extensions":["html","json","md","ts","tsx"]},
+    {"id":"area_006","role":"tax_compliance_product_proof","risk":"safe_summary_only","file_count":118,"dir_count":14,"capped":false,"extensions":["css","html","js","md","py","ts","vue","yml"]},
+    {"id":"area_007","role":"tax_compliance_product_proof","risk":"safe_summary_only","file_count":298,"dir_count":53,"capped":true,"extensions":["cjs","css","example","exe","js","json","jsonl","lock","md","mod","png","ps1"]},
+    {"id":"area_008","role":"enterprise_workflow_product_proof","risk":"safe_summary_only","file_count":2,"dir_count":1,"capped":false,"extensions":["vue"]},
+    {"id":"area_009","role":"enterprise_workflow_product_proof","risk":"safe_summary_only","file_count":1268,"dir_count":156,"capped":true,"extensions":["cjs","css","csv","docx","example","html","js","json","jsonl","lock","log","md"]},
+    {"id":"area_010","role":"enterprise_workflow_product_proof","risk":"safe_summary_only","file_count":651,"dir_count":181,"capped":true,"extensions":["css","html","js","json","lock","log","md","png","py","toml","ts","tsx"]},
+    {"id":"area_011","role":"local_project_or_private_profile_area","risk":"private_no_content_export","file_count":83,"dir_count":32,"capped":true,"extensions":["cjs","css","html","jpeg","jpg","js","json","md","mjs","mmd","png","vue"]},
+    {"id":"area_012","role":"founder_profile_private","risk":"private_no_content_export","file_count":82,"dir_count":8,"capped":false,"extensions":["bak_20260529_182407","bak_20260529_194517","env","json","png","ps1","refs","txt","yml"]},
+    {"id":"area_013","role":"enterprise_workflow_product_proof","risk":"safe_summary_only","file_count":569,"dir_count":50,"capped":false,"extensions":["cjs","css","csv","db","example","html","js","json","lock","md","mjs","png"]},
+    {"id":"area_014","role":"enterprise_workflow_product_proof","risk":"safe_summary_only","file_count":223,"dir_count":35,"capped":false,"extensions":["cjs","css","cssfrag","db","example","html","js","jsfrag","json","lock","md","mjs"]}
+  ],
+  "allowed_next_steps": [
+    "shape this manifest instead of raw private documents",
+    "use vault refs for credentials and identity fields",
+    "publish only capability summaries with explicit approval"
+  ]
+}
